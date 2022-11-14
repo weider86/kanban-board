@@ -96,7 +96,7 @@ socketIO.on("connection", (socket) => {
 		const taskItems = tasks[data.category].items;
 		for (let i = 0; i < taskItems.length; i++) {
 			if (taskItems[i].id === data.id) {
-				socket.emit("comments", taskItems[i].comments);
+				socket.emit("fetchCommentss", taskItems[i].comments);
 			}
 		}
 	});
